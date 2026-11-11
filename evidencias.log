@@ -1,0 +1,125 @@
+Script iniciado em 2026-11-11 10:52:32-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="182" LINES="26"]
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ gita dd .[K[K[K[K[K[K add.[K .][K
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mgit commit -m "Cria a estrutura do projeto e o Makefile"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "Cria a estrutura do projeto e o Makefile"[1PMakefile"[1PMakefile"aMakefile"jMakefile"uMakefile"sMakefile"tMakefile"aMakefile" Makefile"oMakefile" Makefile"
+[?2004l[main 1ba52e5] Cria a estrutura do projeto e ajusta o Makefile
+ 2 files changed, 9 insertions(+), 3 deletions(-)
+ create mode 100644 src/main.c
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ p[Kgit push
+[?2004lEnumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3/5)Writing objects:  80% (4/5)Writing objects: 100% (5/5)Writing objects: 100% (5/5), 570 bytes | 570.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/yan791/banker.git
+   b16b1b3..1ba52e5  main -> main
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mgcc -std=c11 -Wall -Wextra -pedantic -Iinclude /tmp/test_fatal.c src/util.c -o /tmp/test_fatal[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -std=c11 -Wall -Wextra -pedantic -Iinclude /tmp/test_fatal.c src/util.c -o /tmp/test_fatal
+[?2004l[01m[Kcc1:[m[K [01;31m[Kfatal error: [m[K/tmp/test_fatal.c: Arquivo ou diretório inexistente
+compilation terminated.
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/banker.o src/input.o src/output.o src/parser.o src/util.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude   -c -o src/main.o src/main.c
+make: *** Sem regra para processar o alvo 'src/banker.o', necessário por 'banker'.  Pare.
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/banker.o src/input.o src/output.o src/parser.o src/util.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat > /tmp/test_fatal.c << 'EOF'[27m
+[7m#include "util.h"[27m
+
+[7mint main(void)[27m
+[7m{[27m
+[7m    fatal("cliente %d solicitou um recurso invalido", 2);[27m
+
+[7m    return 0;[27m
+[7m}[27m
+[7mEOF[27m[A[A[A[A[A[A[A[A[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ cat > /tmp/test_fatal.c << 'EOF'
+#include "util.h"
+
+int main(void)
+{
+    fatal("cliente %d solicitou um recurso invalido", 2);
+
+    return 0;
+}
+EOF
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mgcc -std=c11 -Wall -Wextra -pedantic -Iinclude /tmp/test_fatal.c src/util.c -o /tmp/test_fatal[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -std=c11 -Wall -Wextra -pedantic -Iinclude /tmp/test_fatal.c src/util.c -o /tmp/test_fatal
+[?2004l/usr/bin/ld: /tmp/cciFfJLG.o: na função "main":
+test_fatal.c:(.text+0x1d): undefined reference to `fatal'
+collect2: error: ld returned 1 exit status
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clea
+[?2004lmake: *** Sem regra para processar o alvo 'clea'.  Pare.
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude   -c -o src/main.o src/main.c
+make: *** Sem regra para processar o alvo 'src/banker.o', necessário por 'banker'.  Pare.
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ .;[K/nan[K[K[Kbban[K[K[Kanker
+[?2004lbash: ./banker: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/banker.o src/input.o src/output.o src/parser.o src/util.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mgcc -std=c11 -Wall -Wextra -pedantic -Iinclude src/main.c src/util.c -o banker[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -std=c11 -Wall -Wextra -pedantic -Iinclude src/main.c src/util.c -o banker
+[?2004l/usr/bin/ld: /tmp/ccbg8M1r.o: na função "main":
+main.c:(.text+0x1d): undefined reference to `fatal'
+collect2: error: ld returned 1 exit status
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ gcc -std=c11 -Wall -Wextra -pedantic -Iinclude src/main.c src/util.c -o banker[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake clean[K[2P./banker[4Pmake./banker
+[?2004lbash: ./banker: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make cele[K[K[Klean
+[?2004lrm -f banker src/main.o src/banker.o src/input.o src/output.o src/parser.o src/util.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude   -c -o src/main.o src/main.c
+make: *** Sem regra para processar o alvo 'src/banker.o', necessário por 'banker'.  Pare.
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mgcc -std=c11 -Wall -Wextra -pedantic -Iinclude src/main.c src/util.c -o banker[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -std=c11 -Wall -Wextra -pedantic -Iinclude src/main.c src/util.c -o banker
+[?2004l/usr/bin/ld: /tmp/ccFK2XWU.o: na função "main":
+main.c:(.text+0x1d): undefined reference to `fatal'
+collect2: error: ld returned 1 exit status
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ ./banker
+[?2004lbash: ./banker: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make cel[K[Klean
+[?2004lrm -f banker src/main.o src/util.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/main.c -o src/main.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/util.c -o src/util.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -o banker src/main.o src/util.o
+/usr/bin/ld: src/main.o: na função "main":
+main.c:(.text.startup+0x19): undefined reference to `fatal'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:13: banker] Erro 1
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./banker[27m./banker
+[?2004lbash: ./banker: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l127
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat -n src/util.c[27mcat -n src/util.c
+[?2004l     1	#include <stdarg.h>
+     2	#include <stdio.h>
+     3	#include <stdlib.h>
+     4	#include "util.h"
+     5	
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat -n include/util.h[27mcat -n include/util.h
+[?2004l     1	#ifndef UTIL_H
+     2	#define UTIL_H
+     3	
+     4	#include <stddef.h>
+     5	
+     6	#if defined(__GNUC__) || defined(__clang__)
+     7	#define ATTR_FATAL __attribute__((format(printf, 1, 2), noreturn))
+     8	#else
+     9	#define ATTR_FATAL
+    10	#endif
+    11	
+    12	void fatal(const char *format, ...) ATTR_FATAL;
+    13	
+    14	#endif [?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/util.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ mnake
+[?2004lComando 'mnake' não encontrado, você quis dizer:
+  comando 'snake' do deb bsdgames (2.17-30)
+  comando 'mmake' do deb mmake (2.3-9)
+  comando 'make' do deb make (4.3-4.1build1)
+  comando 'make' do deb make-guile (4.3-4.1build1)
+Experimente: sudo apt install <deb name>
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/main.c -o src/main.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/util.c -o src/util.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -o banker src/main.o src/util.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ .;[K[Kmakenakeake cleancat -n include/util.h[4Psrc/util.c[10Pecho $?./banker
+[?2004lError: teste de erro: codigo 42
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn

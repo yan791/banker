@@ -1,6 +1,10 @@
 #include <stdlib.h>
 
+#include "util.h"
+
 int main(void)
 {
-    return EXIT_SUCCESS;
+    fatal("teste de erro: codigo %d", 42);
+
+    return 0;
 }
