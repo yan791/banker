@@ -41,3 +41,13 @@ void *xrealloc(void *pointer, size_t size)
         fatal("out of memory");
     return new_pointer;
 }
+void free_matrix(int **matrix, int rows)
+{
+    int i;
+
+    if (matrix == NULL)
+        return;
+    for (i = 0; i < rows; i++)
+        free(matrix[i]);
+    free(matrix);
+}

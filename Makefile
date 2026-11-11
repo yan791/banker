@@ -3,8 +3,8 @@ CC      = cc
 CFLAGS  = -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude
 
 TARGET  = banker
-SRCS    = src/main.c src/util.c
-HEADERS = include/util.h
+SRCS    = src/main.c src/util.c src/parser.c
+HEADERS = include/util.h include/parser.h
 OBJS    = $(SRCS:.c=.o)
 
 all: $(TARGET)

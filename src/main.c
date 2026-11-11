@@ -1,36 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "util.h"
+#include "parser.h"
 
 int main(void)
 {
-    int *numbers = xmalloc(2 * sizeof(int));
+    int value;
 
-    numbers[0] = 10;
-    numbers[1] = 20;
-
-    printf("xmalloc: %d e %d\n", numbers[0], numbers[1]);
-
-    int *zeroed = xcalloc(3, sizeof(int));
-
-    if (zeroed[0] != 0 || zeroed[1] != 0 || zeroed[2] != 0)
+    if (parse_non_negative("123", &value) && value == 123)
+        printf("Teste 1: numero valido - OK\n");
+    else
         return EXIT_FAILURE;
 
-    printf("xcalloc: memoria inicializada com zero\n");
-
-    numbers = xrealloc(numbers, 4 * sizeof(int));
-
-    if (numbers[0] != 10 || numbers[1] != 20)
+    if (parse_non_negative("0", &value) && value == 0)
+        printf("Teste 2: zero - OK\n");
+    else
         return EXIT_FAILURE;
 
-    numbers[2] = 30;
-    numbers[3] = 40;
+    if (!parse_non_negative("-5", &value))
+        printf("Teste 3: numero negativo rejeitado - OK\n");
+    else
+        return EXIT_FAILURE;
 
-    printf("xrealloc: %d, %d, %d e %d\n",
-           numbers[0], numbers[1], numbers[2], numbers[3]);
+    if (!parse_non_negative("12a", &value))
+        printf("Teste 4: texto invalido rejeitado - OK\n");
+    else
+        return EXIT_FAILURE;
 
-    free(numbers);
-    free(zeroed);
+    if (!parse_non_negative("", &value))
+        printf("Teste 5: texto vazio rejeitado - OK\n");
+    else
+        return EXIT_FAILURE;
+
+    if (!parse_non_negative("999999999999999999999999", &value))
+        printf("Teste 6: numero muito grande rejeitado - OK\n");
+    else
+        return EXIT_FAILURE;
 
     return EXIT_SUCCESS;
 }
