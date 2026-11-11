@@ -10,5 +10,7 @@
 #endif
 
 void fatal(const char *format, ...) ATTR_FATAL;
-
+void *xmalloc(size_t size);
+void *xcalloc(size_t count, size_t size);
+void *xrealloc(void *pointer, size_t size);
 #endif 
