@@ -4,9 +4,60 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include "parser.h"
 #include "util.h"
+
+static char *line_buffer = NULL;
+static size_t line_capacity = 0;
+
+int read_line(FILE *file, const char *filename, int line_number, char **line)
+{
+    size_t length = 0;
+    int c;
+
+    if (line_buffer == NULL) {
+        line_capacity = 128;
+        line_buffer = xmalloc(line_capacity);
+    }
+
+    while ((c = fgetc(file)) != EOF && c != '\n') {
+        if (c == '\0')
+            fatal("%s, line %d: invalid character in file "
+                  "(the file must be plain text)", filename, line_number);
+
+        if (length + 1 >= line_capacity) {
+            line_buffer = xrealloc(line_buffer, line_capacity * 2);
+            line_capacity *= 2;
+        }
+
+        line_buffer[length++] = (char) c;
+    }
+
+    if (ferror(file))
+        fatal("could not read %s: %s", filename, strerror(errno));
+
+    line_buffer[length] = '\0';
+    *line = line_buffer;
+
+    return !(c == EOF && length == 0);
+}
+
+char *trim(char *text)
+{
+    char *end;
+
+    while (isspace((unsigned char) *text))
+        text++;
+
+    end = text + strlen(text);
+
+    while (end > text && isspace((unsigned char) end[-1]))
+        end--;
+
+    *end = '\0';
+
+    return text;
+}
 
 int parse_non_negative(const char *text, int *value)
 {
@@ -30,5 +81,14 @@ int parse_non_negative(const char *text, int *value)
     }
 
     *value = result;
+
     return 1;
+}
+
+void parser_free(void)
+{
+    free(line_buffer);
+
+    line_buffer = NULL;
+    line_capacity = 0;
 }
