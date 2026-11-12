@@ -503,4 +503,106 @@ cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/banker.c -o src/banker.
       |            [01;35m[K^~~~~~~[m[K
 cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/input.c -o src/input.o
 cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -o banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
-[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[0
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ ./banker
+[?2004lErro: ponteiro retornado incorretamente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/main.c -o src/main.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/util.c -o src/util.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/parser.c -o src/parser.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/banker.c -o src/banker.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/input.c -o src/input.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -o banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ ./banker
+[?2004lFalha de segmentação (imagem do núcleo gravada)
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/main.c -o src/main.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/util.c -o src/util.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/parser.c -o src/parser.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/banker.c -o src/banker.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/input.c -o src/input.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -o banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ ./banker
+[?2004lbanker_add_customer: OK
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ git add .
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ git commit -m "[7m implementa adicao dinamica de clientes"[27m implementa adicao dinamica de clientes"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[1@n[1@d[1@o[C[1@ [1@a
+[?2004l[main 6309740] implementando a adicao dinamica de clientes
+ 4 files changed, 68 insertions(+), 19 deletions(-)
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ git push
+[?2004lEnumerating objects: 15, done.
+Counting objects:   6% (1/15)Counting objects:  13% (2/15)Counting objects:  20% (3/15)Counting objects:  26% (4/15)Counting objects:  33% (5/15)Counting objects:  40% (6/15)Counting objects:  46% (7/15)Counting objects:  53% (8/15)Counting objects:  60% (9/15)Counting objects:  66% (10/15)Counting objects:  73% (11/15)Counting objects:  80% (12/15)Counting objects:  86% (13/15)Counting objects:  93% (14/15)Counting objects: 100% (15/15)Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects:  12% (1/8)Compressing objects:  25% (2/8)Compressing objects:  37% (3/8)Compressing objects:  50% (4/8)Compressing objects:  62% (5/8)Compressing objects:  75% (6/8)Compressing objects:  87% (7/8)Compressing objects: 100% (8/8)Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)Writing objects:  25% (2/8)Writing objects:  37% (3/8)Writing objects:  50% (4/8)Writing objects:  62% (5/8)Writing objects:  75% (6/8)Writing objects:  87% (7/8)Writing objects: 100% (8/8)Writing objects: 100% (8/8), 2.14 KiB | 313.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+To https://github.com/yan791/banker.git
+   40cde99..6309740  main -> main
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/main.c -o src/main.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/util.c -o src/util.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/parser.c -o src/parser.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/banker.c -o src/banker.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/input.c -o src/input.o
+[01m[Ksrc/input.c:49:13:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kparse_customer_line[m[K’
+   49 | static void [01;31m[Kparse_customer_line[m[K(char *line, int line_number, int customer,
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/input.c:32:13:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kparse_customer_line[m[K’ with type ‘[01m[Kvoid(char *, int,  int,  int *)[m[K’
+   32 | static void [01;36m[Kparse_customer_line[m[K(char *line, int line_number, int customer,int *row)
+      |             [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/input.c:113:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kload_customers[m[K’
+  113 | void [01;31m[Kload_customers[m[K(void)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Ksrc/input.c:81:6:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kload_customers[m[K’ with type ‘[01m[Kvoid(void)[m[K’
+   81 | void [01;36m[Kload_customers[m[K(void)
+      |      [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Ksrc/input.c:32:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kparse_customer_line[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+   32 | static void [01;35m[Kparse_customer_line[m[K(char *line, int line_number, int customer,int *row)
+      |             [01;35mScript iniciado em 2026-11-12 17:17:30-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="156" LINES="38"]
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./banker 10 5 7[27m./banker 10 5 7[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmake
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/main.c -o src/main.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/util.c -o src/util.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/parser.c -o src/parser.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/banker.c -o src/banker.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/input.c -o src/input.o
+[01m[Ksrc/input.c:49:13:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kparse_customer_line[m[K’
+   49 | static void [01;31m[Kparse_customer_line[m[K(char *line, int line_number, int customer,
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/input.c:32:13:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kparse_customer_line[m[K’ with type ‘[01m[Kvoid(char *, int,  int,  int *)[m[K’
+   32 | static void [01;36m[Kparse_customer_line[m[K(char *line, int line_number, int customer,int *row)
+      |             [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/input.c:113:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kload_customers[m[K’
+  113 | void [01;31m[Kload_customers[m[K(void)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Ksrc/input.c:81:6:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kload_customers[m[K’ with type ‘[01m[Kvoid(void)[m[K’
+   81 | void [01;36m[Kload_customers[m[K(void)
+      |      [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Ksrc/input.c:32:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kparse_customer_line[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+   32 | static void [01;35m[Kparse_customer_line[m[K(char *line, int line_number, int customer,int *row)
+      |             [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+make: *** [Makefile:15: src/input.o] Erro 1
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./banker 10 5 7[27m./banker 10 5 7
+[?2004lbash: ./banker: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make celan[K[K[K[Klean
+[?2004lrm -f banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lcc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/main.c -o src/main.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/util.c -o src/util.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/parser.c -o src/parser.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/banker.c -o src/banker.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -c src/input.c -o src/input.o
+cc -std=c99 -Wall -Wextra -pedantic -O2 -Iinclude -o banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./banker 10 5 7[27m./banker 10 5 7
+[?2004lbanker_add_customer: OK
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -f banker src/main.o src/util.o src/parser.o src/banker.o src/input.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m

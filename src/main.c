@@ -1,22 +1,30 @@
 #include <stdio.h>
+
 #include "banker.h"
+#include "input.h"
+#include "parser.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
-    int *customer;
+    int i;
+    int j;
 
-    banker_init_resources(3);
+    parse_arguments(argc, argv);
+    load_customers();
 
-    customer = banker_add_customer();
+    printf("Quantidade de clientes: %d\n", NUMBER_OF_CUSTOMERS);
+    printf("Quantidade de recursos: %d\n", NUMBER_OF_RESOURCES);
 
-    if (customer != maximum[0]) {
-        printf("Erro: ponteiro retornado incorretamente\n");
-        banker_free();
-        return 1;
+    printf("\nMAXIMUM:\n");
+
+    for (i = 0; i < NUMBER_OF_CUSTOMERS; i++) {
+        for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+            printf("%d ", maximum[i][j]);
+
+        printf("\n");
     }
 
-    printf("banker_add_customer: OK\n");
-
+    parser_free();
     banker_free();
 
     return 0;
