@@ -20,6 +20,25 @@ void banker_init_resources(int number_of_resources){
     available = xcalloc((size_t) NUMBER_OF_RESOURCES, sizeof *available);
 }
 
+int *banker_add_customer(void){
+    if (NUMBER_OF_CUSTOMERS == maximum_capacity) {
+        int new_capacity = maximum_capacity > 0 ? maximum_capacity * 2 : 8;
+        int i;
+
+        maximum = xrealloc(maximum, (size_t) new_capacity * sizeof *maximum);
+
+        for (i = maximum_capacity; i < new_capacity; i++)
+            maximum[i] = NULL;
+
+        maximum_capacity = new_capacity;
+    }
+
+    maximum[NUMBER_OF_CUSTOMERS] =
+        xcalloc((size_t) NUMBER_OF_RESOURCES, sizeof **maximum);
+
+    return maximum[NUMBER_OF_CUSTOMERS++];
+}
+
 void banker_free(void){
     free_matrix(maximum, maximum_capacity);
     free_matrix(allocation, NUMBER_OF_CUSTOMERS);

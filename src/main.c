@@ -1,33 +1,23 @@
 #include <stdio.h>
-#include <string.h>
-#include "parser.h"
+#include "banker.h"
 
 int main(void)
 {
-    char text_with_bom[] = "\xEF\xBB\xBF" "7,5,3";
-    char text_without_bom[] = "7,5,3";
+    int *customer;
 
-    char *result;
+    banker_init_resources(3);
 
-    result = skip_bom(text_with_bom);
+    customer = banker_add_customer();
 
-    if (result != text_with_bom + 3 ||
-        strcmp(result, "7,5,3") != 0) {
-        printf("Teste 1: FALHOU\n");
+    if (customer != maximum[0]) {
+        printf("Erro: ponteiro retornado incorretamente\n");
+        banker_free();
         return 1;
     }
 
-    printf("Teste 1: remocao do BOM UTF-8 - OK\n");
+    printf("banker_add_customer: OK\n");
 
-    result = skip_bom(text_without_bom);
-
-    if (result != text_without_bom ||
-        strcmp(result, "7,5,3") != 0) {
-        printf("Teste 2: FALHOU\n");
-        return 1;
-    }
-
-    printf("Teste 2: texto sem BOM preservado - OK\n");
+    banker_free();
 
     return 0;
 }
