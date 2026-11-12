@@ -9,8 +9,7 @@
 #include "parser.h"
 #include "util.h"
 
-void parse_arguments(int argc, char *argv[])
-{
+void parse_arguments(int argc, char *argv[]){
     int j;
 
     if (argc < 2)

@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include "util.h"
 
-void fatal(const char *format, ...)
-{
+void fatal(const char *format, ...){
     va_list args;
 
     fflush(stdout);
@@ -15,8 +14,7 @@ void fatal(const char *format, ...)
     fputc('\n', stderr);
     exit(EXIT_FAILURE);
 }
-void *xmalloc(size_t size)
-{
+void *xmalloc(size_t size){
     void *pointer = malloc(size > 0 ? size : 1);
 
     if (pointer == NULL)
@@ -24,8 +22,7 @@ void *xmalloc(size_t size)
     return pointer;
 }
 
-void *xcalloc(size_t count, size_t size)
-{
+void *xcalloc(size_t count, size_t size){
     void *pointer = calloc(count > 0 ? count : 1, size > 0 ? size : 1);
 
     if (pointer == NULL)
@@ -33,16 +30,14 @@ void *xcalloc(size_t count, size_t size)
     return pointer;
 }
 
-void *xrealloc(void *pointer, size_t size)
-{
+void *xrealloc(void *pointer, size_t size){
     void *new_pointer = realloc(pointer, size > 0 ? size : 1);
 
     if (new_pointer == NULL)
         fatal("out of memory");
     return new_pointer;
 }
-void free_matrix(int **matrix, int rows)
-{
+void free_matrix(int **matrix, int rows){
     int i;
 
     if (matrix == NULL)
