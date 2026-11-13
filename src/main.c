@@ -1,31 +1,21 @@
 #include <stdio.h>
-
-#include "banker.h"
-#include "input.h"
+#include <string.h>
 #include "parser.h"
 
-int main(int argc, char *argv[])
+int main(void)
 {
-    int i;
-    int j;
+    char command[] = "  RQ   0  2\t1 ";
+    char *cursor = command;
+    char *token;
 
-    parse_arguments(argc, argv);
-    load_customers();
+    token = next_token(&cursor);
 
-    printf("Quantidade de clientes: %d\n", NUMBER_OF_CUSTOMERS);
-    printf("Quantidade de recursos: %d\n", NUMBER_OF_RESOURCES);
+    printf("Token encontrado: '%s'\n", token);
 
-    printf("\nMAXIMUM:\n");
-
-    for (i = 0; i < NUMBER_OF_CUSTOMERS; i++) {
-        for (j = 0; j < NUMBER_OF_RESOURCES; j++)
-            printf("%d ", maximum[i][j]);
-
-        printf("\n");
+    if (strcmp(token, "RQ") != 0) {
+        printf("Erro: token encontrado incorretamente!\n");
+        return 1;
     }
-
-    parser_free();
-    banker_free();
 
     return 0;
 }

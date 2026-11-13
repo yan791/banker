@@ -61,6 +61,32 @@ char *skip_bom(char *text){
         return text + 3;
     return text;
 }
+
+char *next_token(char **cursor){
+    char *start = *cursor;
+    char *end;
+
+    while (isspace((unsigned char) *start))
+        start++;
+
+    if (*start == '\0') {
+        *cursor = start;
+        return NULL;
+    }
+
+    end = start;
+
+    while (*end != '\0' && !isspace((unsigned char) *end))
+        end++;
+
+    if (*end != '\0')
+        *end++ = '\0';
+
+    *cursor = end;
+
+    return start;
+}
+
 int parse_non_negative(const char *text, int *value){
     int result = 0;
 
