@@ -66,6 +66,13 @@ static void parse_customer_line(char *line, int line_number, int customer,int *r
               "(customer %d) has %d resource value(s), but %d resource "
               "type(s) were given on the command line",
               CUSTOMER_FILE, line_number, customer, count, NUMBER_OF_RESOURCES);
+
+    for (count = 0; count < NUMBER_OF_RESOURCES; count++)
+        if (row[count] > available[count])
+            fatal("%s, line %d: customer %d maximum demand for resource %d "
+                  "(%d) exceeds the total number of instances (%d)",
+                  CUSTOMER_FILE, line_number, customer, count,
+                  row[count], available[count]);
 }
 
 void load_customers(void)
