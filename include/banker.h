@@ -11,6 +11,7 @@ extern int **need;
 
 void banker_init_resources(int number_of_resources);
 int *banker_add_customer(void);
+void initialize_state(void);
 void banker_free(void);
 
 #endif 

@@ -39,6 +39,25 @@ int *banker_add_customer(void){
     return maximum[NUMBER_OF_CUSTOMERS++];
 }
 
+void initialize_state(void){
+    int i, j;
+
+    allocation = xcalloc((size_t) NUMBER_OF_CUSTOMERS, sizeof *allocation);
+    need = xcalloc((size_t) NUMBER_OF_CUSTOMERS, sizeof *need);
+
+    for (i = 0; i < NUMBER_OF_CUSTOMERS; i++) {
+        allocation[i] = xcalloc((size_t) NUMBER_OF_RESOURCES,
+                                sizeof **allocation);
+        need[i] = xcalloc((size_t) NUMBER_OF_RESOURCES, sizeof **need);
+
+        for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+            need[i][j] = maximum[i][j];
+    }
+
+    work = xcalloc((size_t) NUMBER_OF_RESOURCES, sizeof *work);
+    finish = xcalloc((size_t) NUMBER_OF_CUSTOMERS, sizeof *finish);
+}
+
 void banker_free(void){
     free_matrix(maximum, maximum_capacity);
     free_matrix(allocation, NUMBER_OF_CUSTOMERS);
