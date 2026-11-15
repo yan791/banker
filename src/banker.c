@@ -58,6 +58,70 @@ void initialize_state(void){
     finish = xcalloc((size_t) NUMBER_OF_CUSTOMERS, sizeof *finish);
 }
 
+static int less_or_equal(const int a[], const int b[]){
+    int j;
+
+    for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+        if (a[j] > b[j])
+            return 0;
+    return 1;
+}
+
+static int is_safe(void){
+    int i, j;
+    int finished = 0;
+    int progress = 1;
+
+    for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+        work[j] = available[j];
+    for (i = 0; i < NUMBER_OF_CUSTOMERS; i++)
+        finish[i] = 0;
+
+    while (progress) {
+        progress = 0;
+        for (i = 0; i < NUMBER_OF_CUSTOMERS; i++) {
+            if (finish[i] || !less_or_equal(need[i], work))
+                continue;
+            for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+                work[j] += allocation[i][j];
+            finish[i] = 1;
+            finished++;
+            progress = 1;
+        }
+    }
+
+    return finished == NUMBER_OF_CUSTOMERS;
+}
+
+int request_resources(int customer_num, const int request[]){
+    int j;
+
+    for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+        if (request[j] > need[customer_num][j])
+            return REQUEST_EXCEEDS_NEED;
+
+    for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+        if (request[j] > available[j])
+            return REQUEST_NOT_AVAILABLE;
+
+    for (j = 0; j < NUMBER_OF_RESOURCES; j++) {
+        available[j] -= request[j];
+        allocation[customer_num][j] += request[j];
+        need[customer_num][j] -= request[j];
+    }
+
+    if (!is_safe()) {
+        for (j = 0; j < NUMBER_OF_RESOURCES; j++) {
+            available[j] += request[j];
+            allocation[customer_num][j] -= request[j];
+            need[customer_num][j] += request[j];
+        }
+        return REQUEST_UNSAFE;
+    }
+
+    return REQUEST_GRANTED;
+}
+
 void banker_free(void){
     free_matrix(maximum, maximum_capacity);
     free_matrix(allocation, NUMBER_OF_CUSTOMERS);
