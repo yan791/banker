@@ -1,21 +1,46 @@
 #include <stdio.h>
-#include <string.h>
+
+#include "banker.h"
+#include "input.h"
 #include "parser.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
-    char command[] = "  RQ   0  2\t1 ";
-    char *cursor = command;
-    char *token;
+    const command *list;
+    int command_count;
+    int i, j;
 
-    token = next_token(&cursor);
+    parse_arguments(argc, argv);
+    load_customers();
+    load_commands();
 
-    printf("Token encontrado: '%s'\n", token);
+    printf("Clientes carregados: %d\n", NUMBER_OF_CUSTOMERS);
+    printf("Recursos: %d\n", NUMBER_OF_RESOURCES);
 
-    if (strcmp(token, "RQ") != 0) {
-        printf("Erro: token encontrado incorretamente!\n");
-        return 1;
+    printf("\nComandos carregados:\n");
+
+    list = get_commands(&command_count);
+
+    for (i = 0; i < command_count; i++) {
+        if (list[i].type == CMD_PRINT) {
+            printf("*\n");
+        } else {
+            printf("%s %d",
+                   list[i].type == CMD_REQUEST ? "RQ" : "RL",
+                   list[i].customer);
+
+            for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+                printf(" %d", list[i].resources[j]);
+
+            printf("\n");
+        }
     }
 
+    printf("\nTotal de comandos: %d\n", command_count);
+
+    input_free();
+    parser_free();
+    banker_free();
+
     return 0;
-}
+}   
