@@ -122,6 +122,22 @@ int request_resources(int customer_num, const int request[]){
     return REQUEST_GRANTED;
 }
 
+int release_resources(int customer_num, const int release[]){
+    int j;
+
+    for (j = 0; j < NUMBER_OF_RESOURCES; j++)
+        if (release[j] > allocation[customer_num][j])
+            return RELEASE_EXCEEDS_ALLOCATION;
+
+    for (j = 0; j < NUMBER_OF_RESOURCES; j++) {
+        allocation[customer_num][j] -= release[j];
+        available[j] += release[j];
+        need[customer_num][j] += release[j];
+    }
+
+    return RELEASE_DONE;
+}
+
 void banker_free(void){
     free_matrix(maximum, maximum_capacity);
     free_matrix(allocation, NUMBER_OF_CUSTOMERS);

@@ -14,10 +14,16 @@ enum {
     REQUEST_UNSAFE            
 };
 
+enum {
+    RELEASE_DONE = 0,         
+    RELEASE_EXCEEDS_ALLOCATION
+};
+
 void banker_init_resources(int number_of_resources);
 int *banker_add_customer(void);
 void initialize_state(void);
 int request_resources(int customer_num, const int request[]);
+int release_resources(int customer_num, const int release[]);
 void banker_free(void);
 
 #endif 
