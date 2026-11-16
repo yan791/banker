@@ -1,0 +1,13 @@
+# arquivos gerados pela compilacao
+/banker
+src/*.o
+tests/test_util
+tests/test_parser
+tests/test_banker
+
+# arquivos de entrada e de saida usados nos testes (customer.txt,
+# commands.txt, result.txt e copias)
+/*.txt
+
+# configuracoes do editor
+.vscode/
