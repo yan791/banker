@@ -3,9 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define CUSTOMER_FILE "customer.txt"
 
-static FILE *input_file = NULL;    
 #include "banker.h"
 #include "input.h"
 #include "parser.h"
@@ -14,6 +12,7 @@ static FILE *input_file = NULL;
 static command *commands = NULL;
 static int number_of_commands = 0;
 static int commands_capacity = 0;
+static FILE *input_file = NULL;
 
 void parse_arguments(int argc, char *argv[]){
     int j;
