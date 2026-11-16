@@ -1,6 +1,7 @@
 #include <errno.h>
 #include <stdio.h>
 #include <string.h>
+
 #include "banker.h"
 #include "input.h"
 #include "output.h"
@@ -54,6 +55,35 @@ static void execute_request(int customer, const int request[]){
     }
 }
 
+static void execute_release(int customer, const int release[]){
+    if (release_resources(customer, release) == RELEASE_DONE) {
+        fprintf(result_file, "Release from customer %d the resources ", customer);
+        write_vector(release);
+        fputc('\n', result_file);
+    } else {
+        fprintf(result_file, "The customer %d release ", customer);
+        write_vector(release);
+        fputs(" was denied because exceed its allocation\n", result_file);
+    }
+}
+
+static void print_state(void){
+    int i;
+
+    fputs("MAXIMUM   |   ALLOCATION  |   NEED\n", result_file);
+    for (i = 0; i < NUMBER_OF_CUSTOMERS; i++) {
+        write_vector_spaced(maximum[i]);
+        fputs("    |   ", result_file);
+        write_vector_spaced(allocation[i]);
+        fputs("      |   ", result_file);
+        write_vector_spaced(need[i]);
+        fputc('\n', result_file);
+    }
+    fputs("AVAILABLE ", result_file);
+    write_vector_spaced(available);
+    fputc('\n', result_file);
+}
+
 void execute_commands(void){
     const command *commands;
     int number_of_commands;
@@ -72,7 +102,12 @@ void execute_commands(void){
         case CMD_REQUEST:
             execute_request(cmd->customer, cmd->resources);
             break;
+        case CMD_RELEASE:
+            execute_release(cmd->customer, cmd->resources);
+            break;
+        case CMD_PRINT:
         default:
+            print_state();
             break;
         }
     }
